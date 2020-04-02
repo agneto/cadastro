@@ -33,16 +33,16 @@ public interface EstadoControllerOpenApi {
             @ApiParam(name = "corpo", value = "Representação de um novo Estado")
             EstadoInput estadoInput);
     
-    @ApiOperation("Atualiza uma cidade por ID")
+    @ApiOperation("Atualiza um Estado por ID")
     @ApiResponses({
-        @ApiResponse(code = 200, message = "Cidade atualizada"),
-        @ApiResponse(code = 404, message = "Cidade não encontrada")
+        @ApiResponse(code = 200, message = "Estado atualizado"),
+        @ApiResponse(code = 404, message = "Estado não encontrado")
     })
     public EstadoModel atualizar(
-            @ApiParam(value = "ID de uma cidade", example = "1") 
+            @ApiParam(value = "ID de um Estado", example = "1") 
             Long estadoId,
 
-            @ApiParam(name = "corpo", value = "Representação de um estado com os novos dados")
+            @ApiParam(name = "corpo", value = "Representação de um Estado com os novos dados")
             EstadoInput estadoInput);
 
     @ApiOperation("Exclui um estado por ID")
